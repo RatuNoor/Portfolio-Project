@@ -1,0 +1,15 @@
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor/IDE configs
+.vscode/
+.idea/
+
+# Agent/AI log artifacts (safe to ignore)
+.agents/
+walkthrough.md
+task.md
+implementation_plan.md

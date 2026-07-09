@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratu Noor — Certificates</title>
+  <link rel="icon" href="assets/docs/logo.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Ratu Noor</a>
+    <div class="nav-inner">
+      <a href="experiences.html">Experiences</a>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="certifications.html" class="active">Certificates</a>
+      <a href="index.html">Main Menu</a>
+    </div>
+    <div class="nav-contact-wrapper">
+      <div class="nav-contact plaid-blue">Contact Me</div>
+      <div class="nav-contact-dropdown">
+        <a href="https://wa.me/6282299331193" target="_blank">WhatsApp</a>
+        <a href="mailto:ratunoor003@gmail.com">Gmail</a>
+        <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ratunoor" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="cert-page-wrap">
+
+    <div class="cert-page-eyebrow">Continuous Learning</div>
+    <div class="cert-page-title">Certificates</div>
+    <div class="cert-click-hint">
+      Click to view details and verify credentials
+    </div>
+    <br>
+
+    <!-- stats strip -->
+    <div class="cert-stats-strip">
+      <div class="cert-stat-cell" style="border-color:var(--cert-green-100);background:var(--cert-green-50)">
+        <div class="cert-stat-num" style="color:var(--cert-green-600)" id="s-total">12</div>
+        <div class="cert-stat-label">Total Certifications</div>
+      </div>
+      <div class="cert-stat-cell" style="border-color:var(--cert-blue-100);background:var(--cert-blue-50)">
+        <div class="cert-stat-num" style="color:var(--cert-blue-600)">8</div>
+        <div class="cert-stat-label">Hard Skills</div>
+      </div>
+      <div class="cert-stat-cell" style="border-color:var(--cert-pink-100);background:var(--cert-pink-50)">
+        <div class="cert-stat-num" style="color:var(--cert-pink-600)">4</div>
+        <div class="cert-stat-label">Soft Skills</div>
+      </div>
+      <div class="cert-stat-cell" style="border-color:var(--cert-yellow-100);background:var(--cert-yellow-50)">
+        <div class="cert-stat-num" style="color:var(--cert-yellow-600)">3</div>
+        <div class="cert-stat-label">Issuers</div>
+      </div>
+    </div>
+
+    <!-- filter pills -->
+    <div class="cert-filter-row">
+      <button class="cert-filter-pill active" data-filter="all">All</button>
+      <button class="cert-filter-pill" data-filter="hard">Hard Skills</button>
+      <button class="cert-filter-pill" data-filter="soft">Soft Skills</button>
+      <button class="cert-filter-pill" data-filter="ml">Machine Learning</button>
+      <button class="cert-filter-pill" data-filter="data">Data Analytics</button>
+    </div>
+
+    <!-- cert grid -->
+    <div class="cert-grid" id="cert-grid"></div>
+
+    <!-- pagination -->
+    <div class="cert-pagination" id="pagination"></div>
+
+    <!-- footer -->
+    <div class="edu-page-footer">
+      <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+      <div class="edu-footer-links">
+        <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+        <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+        <a href="mailto:ratunoor003@gmail.com">Email</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════
+     MODAL
+══════════════════════════════════ -->
+  <div class="cert-modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+    <div class="cert-modal" id="modal">
+      <div class="cert-modal-img" id="modal-img">
+        <!-- shapes injected by JS -->
+        <button class="cert-modal-close" onclick="closeModalDirect()">✕</button>
+      </div>
+      <div class="cert-modal-body">
+        <div class="cert-modal-eyebrow" id="m-type"></div>
+        <div class="cert-modal-title" id="m-title"></div>
+        <div class="cert-modal-publisher" id="m-pub"></div>
+        <div class="cert-modal-meta" id="m-meta"></div>
+        <div class="cert-modal-desc" id="m-desc"></div>
+        <div
+          style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--cert-muted);margin-bottom:8px">
+          Skills Covered</div>
+        <div class="cert-modal-skills" id="m-skills"></div>
+        <div class="cert-modal-cta-row" id="m-cta"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── CERT DATA ── */
+    const certs = [
+      {
+        title: 'Design Thinking',
+        publisher: 'Kemenaker · GNIK', type: 'soft', category: 'soft',
+        color: 'blue', issuer: 'GC',
+        date: 'December 2025', validity: 'Lifetime', credId: 'XXXX-XXXX',
+        desc: 'Understand the fundamental principles of design thinking and how to apply design thinking concepts and methods. This course is ideal for anyone who wants to bring design thinking to their work or organisation, including team leaders, project managers, product owners, and innovators. It is also a valuable foundation for those pursuing further certification in design and innovation.',
+        keywords: ['Design Thinking', 'Problem Solving', 'Creativity', 'Collaboration', 'User-Centric'],
+        shortDesc: 'Learn design thinking from fundamental principles to application.',
+        img: 'assets/certificates/certificate_designthinking.jpg',
+      },
+      {
+        title: 'Data Analytics Essential with PowerBI',
+        publisher: 'Foresight BI & Analytics · Udemy', type: 'hard', category: 'data',
+        color: 'yellow', issuer: 'Udemy',
+        date: 'October 2025', validity: '2 years', credId: 'XXXX-XXXX',
+        desc: 'Completed the Data Analytics with Power BI course that covers Data Preparation, Data Modeling, Data Analytics Expression (DAX) and Data Visualization using Microsoft Power BI and Power Query. Gained practical experience in writing DAX measures, creating calendar tables, and developing logical data models such as a comparison between Revenue and Revenue SPLY value and also YTD Revenue value. Acquired the ability to make real-time reports accessible to stakeholders across multiple devices.',
+        keywords: ['Power BI', 'DAX', 'Data Modelling', 'Visualisation'],
+        shortDesc: 'Learned data preparation, modeling, visualization, and DAX fundamentals to build automated, interactive reports and dashboards with Power BI.',
+        img: 'assets/certificates/certificate_powerbi_udemy.jpg',
+      },
+      {
+        title: 'Data Visualization with Looker Data Studio',
+        publisher: 'MySkill', type: 'hard', category: 'data',
+        color: 'pink', issuer: 'My',
+        date: 'September 2025', validity: 'Lifetime', credId: 'XXXX-XXXX',
+        desc: 'Completed a short course on data visualization using Google Looker Studio, covering dashboard creation, data storytelling, and analytical presentation techniques.',
+        keywords: ['Data Visualization', 'Looker Studio', 'Dashboard Creation', 'Data Storytelling'],
+        shortDesc: 'Learn data visualization with Google Looker Studio.',
+        img: 'assets/certificates/certificate_looker.jpg',
+      },
+      {
+        title: 'AWS Academy Cloud Security Foundations',
+        publisher: 'AWS Academy', type: 'hard', category: 'cloud',
+        color: 'green', issuer: 'AWS',
+        date: 'December 2024', validity: '2 years', credId: 'https://www.credly.com/go/iFujyinQ',
+        desc: 'Completed the AWS Academy Cloud Security Foundations course, gaining understanding of core AWS cloud concepts, data protection, identity management, and compliance principles.',
+        keywords: ['AWS', 'Cloud Security', 'Data Protection', 'Identity Management', 'Compliance'],
+        shortDesc: 'Learn core AWS cloud concepts, data protection, identity management, and compliance principles.',
+        img: 'assets/certificates/certificate_awscloud.jpg',
+      },
+      {
+        title: 'Bukit Vista 24 Hours Data Science Hackathon',
+        publisher: 'Bukit Vista', type: 'hard', category: 'ml',
+        color: 'pink', issuer: 'BV',
+        date: 'May 2024', validity: 'Lifetime', credId: '-',
+        desc: 'Participated in the Bukit Vista 24 Hours Data Science Hackathon, collaborating in a team of 5 to analyze real company data and propose data-driven pricing strategy improvements using Python and data visualization tools.',
+        keywords: ['Python', 'Data Analysis', 'Data Visualization', 'Hackathon'],
+        shortDesc: 'Analyze company data and propose data-driven pricing strategy improvements.',
+        img: 'assets/certificates/certificate_bukitvista.jpg',
+      },
+      {
+        title: 'TOEFL ITP Prediction Test',
+        publisher: 'MySkill', type: 'soft', category: 'english',
+        color: 'blue', issuer: 'MS',
+        date: 'September 2025', validity: '2 Years', credId: 'XXXX-XXXX',
+        desc: 'Achieved a TOEFL ITP Prediction score of 587, demonstrating advanced proficiency in English.',
+        keywords: ['TOEFL', 'English', 'Prediction'],
+        shortDesc: 'Achieved a TOEFL ITP Prediction score of 587, demonstrating advanced proficiency in English.',
+        img: 'assets/certificates/certificate_itp.jpg',
+      },
+      {
+        title: 'EF Set Certificate - C2 Proficient',
+        publisher: 'EF Standard English Test', type: 'soft', category: 'english',
+        color: 'yellow', issuer: 'EF',
+        date: 'November 2025', validity: 'Lifetime', credId: 'https://cert.efset.org/RhSu7N',
+        desc: 'EF Assessment Score: 78/100 · CEFR C2 Proficient (native / near-native level). This 50-minute assessment covers grammar, vocabulary, reading, and listening comprehension, validating high-level English proficiency for academic and professional contexts.',
+        keywords: ['English', 'C2', 'Proficient'],
+        shortDesc: 'EF Assessment Score: 78/100 · CEFR C2 Proficient.',
+        img: 'assets/certificates/certificate_ef.jpg',
+      },
+      {
+        title: 'Self Efficacy Course',
+        publisher: 'Kemnaker · GNIK', type: 'soft', category: 'soft',
+        color: 'green', issuer: 'PM',
+        date: 'February 2026', validity: 'Lifetime', credId: 'XXXX-XXXX',
+        desc: 'Core project management methodologies including Agile, Scrum and Waterfall. Covers planning, stakeholder communication, risk management and delivery — skills directly applicable to data science project workflows.',
+        keywords: ['Agile', 'Scrum', 'Planning', 'Risk Management', 'Communication'],
+        shortDesc: 'Agile & Scrum for data project delivery.',
+        img: 'assets/certificates/certificate_selfefficacy.jpg',
+      },
+    ];
+
+    /* colour config */
+    const colorMap = {
+      pink: { footer: 'plaid-pink-cert', border: 'var(--cert-pink-100)', kw: 'color:var(--cert-pink-600)', dot: 'var(--cert-pink-400)', issuer: 'background:var(--cert-pink-50);color:var(--cert-pink-600);border-color:var(--cert-pink-200)', modal: 'var(--cert-lavender)' },
+      green: { footer: 'plaid-green-cert', border: 'var(--cert-green-100)', kw: 'color:var(--cert-green-600)', dot: 'var(--cert-green-400)', issuer: 'background:var(--cert-green-50);color:var(--cert-green-600);border-color:var(--cert-green-100)', modal: '#e8f4e0' },
+      yellow: { footer: 'plaid-yellow-cert', border: 'var(--cert-yellow-100)', kw: 'color:var(--cert-yellow-600)', dot: 'var(--cert-yellow-400)', issuer: 'background:var(--cert-yellow-50);color:var(--cert-yellow-600);border-color:var(--cert-yellow-100)', modal: 'var(--cert-yellow-50)' },
+      blue: { footer: 'plaid-blue-cert', border: 'var(--cert-blue-100)', kw: 'color:var(--cert-blue-600)', dot: 'var(--cert-blue-400)', issuer: 'background:var(--cert-blue-50);color:var(--cert-blue-600);border-color:var(--cert-blue-100)', modal: 'var(--cert-blue-50)' },
+    };
+
+    const PER_PAGE = 4;
+    let currentPage = 0;
+    let filtered = [...certs];
+
+    function renderGrid() {
+      const grid = document.getElementById('cert-grid');
+      const pg = document.getElementById('pagination');
+      const slice = filtered.slice(currentPage * PER_PAGE, (currentPage + 1) * PER_PAGE);
+      const total = Math.ceil(filtered.length / PER_PAGE);
+
+      grid.innerHTML = '';
+      slice.forEach((c, i) => {
+        const cm = colorMap[c.color];
+        const card = document.createElement('div');
+        card.className = `cert-card ${cm.footer}`;
+        card.style.transitionDelay = `${i * .08}s`;
+        card.innerHTML = `
+      <div class="cert-img">
+        <div class="cert-cs cert-cs-tri"></div>
+        <div class="cert-cs cert-cs-star"></div>
+        <div class="cert-cs cert-cs-rect"></div>
+        <div class="cert-issuer-badge" style="${cm.issuer};border:1.5px dashed">${c.issuer}</div>
+        <img src="${c.img}" alt="${c.title}" class="cert-photo-img" onerror="this.style.display='none';">
+      </div>
+      <div class="cert-footer" style="border-top:0.5px solid ${cm.border}">
+        <div class="cert-footer-top">
+          <div class="cert-title">${c.title}</div>
+          <div class="cert-keywords" style="${cm.kw}">${c.keywords.slice(0, 3).join(' · ')}</div>
+        </div>
+        <div class="cert-publisher">${c.publisher}</div>
+        <div class="cert-short-desc">${c.shortDesc}</div>
+        <div class="cert-valid-row">
+          <div class="cert-valid-dot" style="background:${cm.dot}"></div>
+          <div class="cert-valid-text">Valid: ${c.validity} · Completed ${c.date}</div>
+        </div>
+      </div>
+    `;
+        card.addEventListener('click', () => openModal(c));
+        grid.appendChild(card);
+        requestAnimationFrame(() => setTimeout(() => card.classList.add('visible'), 30 + i * 70));
+      });
+
+      // pagination
+      pg.innerHTML = '';
+      for (let i = 0; i < total; i++) {
+        const btn = document.createElement('div');
+        btn.className = 'cert-pg-btn' + (i === currentPage ? ' active' : '');
+        btn.textContent = i + 1;
+        btn.addEventListener('click', () => { currentPage = i; renderGrid(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        pg.appendChild(btn);
+      }
+    }
+
+    /* ── FILTER ── */
+    document.querySelectorAll('.cert-filter-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.cert-filter-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const f = pill.dataset.filter;
+        filtered = f === 'all' ? [...certs]
+          : f === 'hard' ? certs.filter(c => c.type === 'hard')
+            : f === 'soft' ? certs.filter(c => c.type === 'soft')
+              : certs.filter(c => c.category === f);
+        currentPage = 0;
+        renderGrid();
+      });
+    });
+
+    /* ── MODAL ── */
+    function openModal(c) {
+      const cm = colorMap[c.color];
+      const overlay = document.getElementById('modal-overlay');
+      const img = document.getElementById('modal-img');
+
+      // rebuild shapes in modal img
+      img.style.background = cm.modal;
+      img.querySelectorAll('.cert-cs,.cert-issuer-badge,.cert-photo-img').forEach(e => e.remove());
+      ['cert-cs cert-cs-tri', 'cert-cs cert-cs-star', 'cert-cs cert-cs-rect'].forEach(cls => {
+        const d = document.createElement('div'); d.className = cls; img.appendChild(d);
+      });
+      const badge = document.createElement('div');
+      badge.className = 'cert-issuer-badge';
+      badge.style.cssText = `${cm.issuer};border:1.5px dashed;top:14px;right:58px;`;
+      badge.textContent = c.issuer;
+      img.appendChild(badge);
+
+      // add photo image with fallback
+      const photo = document.createElement('img');
+      photo.src = c.img;
+      photo.alt = c.title;
+      photo.className = 'cert-photo-img';
+      photo.onerror = function () { this.style.display = 'none'; };
+      img.appendChild(photo);
+
+      // populate text
+      document.getElementById('m-type').textContent = c.type === 'hard' ? 'Hard Skill Certification' : 'Soft Skill Certification';
+      document.getElementById('m-title').textContent = c.title;
+      document.getElementById('m-pub').innerHTML = `<span>Publisher:</span> ${c.publisher}`;
+      document.getElementById('m-desc').textContent = c.desc;
+
+      document.getElementById('m-meta').innerHTML = `
+    <div class="cert-modal-meta-cell"><div class="cert-modal-meta-key">Completed</div><div class="cert-modal-meta-val">${c.date}</div></div>
+    <div class="cert-modal-meta-cell"><div class="cert-modal-meta-key">Validity</div><div class="cert-modal-meta-val">${c.validity}</div></div>
+    <div class="cert-modal-meta-cell"><div class="cert-modal-meta-key">Credential ID</div><div class="cert-modal-meta-val" style="font-family:monospace;font-size:12px">${c.credId}</div></div>
+    <div class="cert-modal-meta-cell"><div class="cert-modal-meta-key">Category</div><div class="cert-modal-meta-val" style="${cm.kw}">${c.keywords[0]} · ${c.keywords[1]}</div></div>
+  `;
+
+      const skillsEl = document.getElementById('m-skills');
+      skillsEl.innerHTML = c.keywords.map(k => `<div class="cert-modal-skill-tag">${k}</div>`).join('');
+
+      const isUrl = c.credId.startsWith('http');
+      document.getElementById('m-cta').innerHTML = `
+    <a href="${isUrl ? c.credId : '#'}" ${isUrl ? 'target="_blank"' : ''} class="cert-modal-btn cert-mbtn-verify" ${isUrl ? '' : 'style="opacity:0.5; cursor:not-allowed;"'}>Verify Credential</a>
+    <a href="${c.img}" target="_blank" class="cert-modal-btn cert-mbtn-view">View Certificate</a>
+  `;
+
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(e) {
+      if (e.target === document.getElementById('modal-overlay')) closeModalDirect();
+    }
+    function closeModalDirect() {
+      document.getElementById('modal-overlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+    // Contact accordion toggle on click
+    document.addEventListener('click', (e) => {
+      const wrapper = document.querySelector('.nav-contact-wrapper');
+      if (!wrapper) return;
+      const isClickInside = wrapper.contains(e.target);
+      if (isClickInside) {
+        const trigger = wrapper.querySelector('.nav-contact');
+        if (trigger && (e.target === trigger || trigger.contains(e.target))) {
+          wrapper.classList.toggle('active');
+        }
+      } else {
+        wrapper.classList.remove('active');
+      }
+    });
+
+    /* ── INIT ── */
+    renderGrid();
+  </script>
+</body>
+
+</html>

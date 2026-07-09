@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratu Noor — Job Experiences</title>
+  <link rel="icon" href="assets/docs/logo.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Ratu Noor</a>
+    <div class="nav-inner">
+      <a href="experiences.html" class="active" onclick="showPage('list',this)">Experiences</a>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="certifications.html">Certificates</a>
+      <a href="index.html">Main Menu</a>
+    </div>
+    <div class="nav-contact-wrapper">
+      <div class="nav-contact plaid-blue">Contact Me</div>
+      <div class="nav-contact-dropdown">
+        <a href="https://wa.me/6282299331193" target="_blank">WhatsApp</a>
+        <a href="mailto:ratunoor003@gmail.com">Gmail</a>
+        <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ratunoor" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+     PAGE 1 — EXPERIENCE LIST
+══════════════════════════════════════ -->
+  <div class="page active" id="page-list">
+    <div class="list-page">
+
+      <div class="list-eyebrow">Work History</div>
+      <div class="list-title">Job Experiences</div>
+      <div class="list-subtitle">Where I apply my skills in professional settings, learned how to communicate and manage
+        projects</div>
+
+      <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <div class="exp-card" onclick="showDetail('page-detail-1')">
+          <div class="card-header plaid-pink-header">
+            <div class="card-avatar">P</div>
+            <div class="card-header-text">
+              <div class="job-title">Maintenance Data Analyst (Machine Learning) Intern</div>
+              <div class="company">Peruri</div>
+            </div>
+            <div class="card-header-dots">⋮</div>
+          </div>
+          <div class="card-image">
+            <img src="assets/projects/peruri_img_1.jpeg" alt="Peruri Experience"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+              onerror="this.style.display='none';">
+            <div class="ph ph-triangle" style="z-index: 1;"></div>
+            <div class="ph ph-star" style="z-index: 1;"></div>
+            <div class="ph ph-rect" style="z-index: 1;"></div>
+          </div>
+          <div class="card-body plaid-green-body">
+            <div class="role-title">Intern</div>
+            <div class="role-date">23/11/2025 – 22/05/2026 (6 months)</div>
+            <div class="role-desc">Visualize, Analyze, Cleanse, and Build Machine Learning from maintenance text data.
+            </div>
+            <div class="role-keywords">Keywords: NLP, Information Retrieval, Visualization, Machine Learning, Deep
+              Learning, Python,
+              SQL, Power BI</div>
+            <button class="more-btn more-btn-blue" onclick="event.stopPropagation();showDetail('page-detail-1')">More
+              Details</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="exp-card" onclick="showDetail('page-detail-2')">
+          <div class="card-header plaid-green-header">
+            <div class="card-avatar" style="background:#a0b8d0;">UT</div>
+            <div class="card-header-text">
+              <div class="job-title">Data Scientist Intern</div>
+              <div class="company">PT United Tractors Tbk</div>
+            </div>
+            <div class="card-header-dots">⋮</div>
+          </div>
+          <div class="card-image">
+            <img src="assets/projects/ut_img.jpeg" alt="United Tractors Experience"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+              onerror="this.style.display='none';">
+            <div class="ph ph-triangle" style="z-index: 1;"></div>
+            <div class="ph ph-star" style="z-index: 1;"></div>
+            <div class="ph ph-rect" style="z-index: 1;"></div>
+          </div>
+          <div class="card-body plaid-blue-body">
+            <div class="role-title">Intern</div>
+            <div class="role-date">09/01/2024 – 08/02/2024 (2 Months)</div>
+            <div class="role-desc">Contributed to the Coal Price Analysis and Forecasting Project under the Data &
+              Digital Solutions Division. The internship also provided direct
+              mentorship and exposure to the agile development workflow practiced within the division.</div>
+            <div class="role-keywords">Keywords: Deep Learning, Time Series, Forecasting, Python, Data Visualization,
+              Agile Development</div>
+            <button class="more-btn more-btn-pink" onclick="event.stopPropagation();showDetail('page-detail-2')">More
+              Details</button>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="edu-page-footer">
+        <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+        <div class="edu-footer-links">
+          <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+          <a href="mailto:ratunoor003@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════
+     PAGE 2 — EXPERIENCE DETAIL (JOB 1)
+  ══════════════════════════════════════ -->
+  <div class="page" id="page-detail-1">
+    <div class="detail-page">
+
+      <!-- Lavender hero -->
+      <div class="detail-hero" id="carousel-container-1">
+        <div class="detail-shapes">
+          <div class="dh-triangle"></div>
+          <div class="dh-star"></div>
+          <div class="dh-rect"></div>
+        </div>
+        <!-- Carousel Container -->
+        <div class="detail-hero-carousel">
+          <div class="carousel-track" id="carousel-track-1">
+            <div class="carousel-slide">
+              <img src="assets/projects/peruri_img_1.jpeg" alt="Peruri Experience 1"
+                onerror="this.style.display='none';">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/projects/peruri_img_2.jpeg" alt="Peruri Experience 2"
+                onerror="this.style.display='none';">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/projects/peruri_img_3.jpeg" alt="Peruri Experience 2"
+                onerror="this.style.display='none';">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/projects/peruri_img.jpeg" alt="Peruri Experience 2" onerror="this.style.display='none';">
+            </div>
+          </div>
+          <button class="carousel-arrow prev" onclick="moveExpCarousel(1, -1)">❬</button>
+          <button class="carousel-arrow next" onclick="moveExpCarousel(1, 1)">❭</button>
+          <div class="carousel-indicators" id="carousel-indicators-1">
+            <div class="carousel-dot active" onclick="setExpSlideIndex(1, 0)"></div>
+            <div class="carousel-dot" onclick="setExpSlideIndex(1, 1)"></div>
+          </div>
+        </div>
+        <button class="detail-back" onclick="showPage('list',null)">← Back to Experiences</button>
+      </div>
+
+      <!-- detail title section -->
+      <div class="detail-title-section">
+        <div class="detail-hero-title">
+          <span class="detail-job-name">Maintenance Data Analyst (Machine Learning)</span>
+          <span class="detail-separator">·</span>
+          <span class="detail-company">Peruri</span>
+        </div>
+      </div>
+
+      <!-- Short desc + meta box (2-col) -->
+      <div class="detail-body">
+
+        <!-- left col: short description -->
+        <div style="grid-column:1/2; grid-row:1/2; animation: slideInLeft .5s ease both; animation-delay:.3s;">
+          <p class="detail-short-desc">As a Data Analyst in Maintenance Department, I was responsible for handling and
+            analyzing corrective maintenance report data which contains machine's failure description in text format. I
+            cleanse text data utilising NLP and Machine Learning/Deep Learning methods to build various user-oriented
+            solutions such as Part's Occurence Dashboard, Information Retrieval for Corrective Maintenance, and Failure
+            Mode Classification Models.</p>
+        </div>
+
+        <!-- right col: meta table -->
+        <div class="meta-box">
+          <div class="meta-row">
+            <div class="meta-key">Duration</div>
+            <div class="meta-val">: 24/11/2025 – 23/05/2026 (6 Months)</div>
+            <div class="meta-key">Type</div>
+            <div class="meta-val">: Internship</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-key">Tools/Libraries</div>
+            <div class="meta-val">: Python, SQL, Power Bi, Regex, Tensorflow, Transformer, Numpy, Pandas</div>
+            <div class="meta-key">Keywords</div>
+            <div class="meta-val keywords">: NLP, Information Retrieval, Dashboard, Visualization, Time Series, Text
+              Classification, Failure Mode</div>
+          </div>
+        </div>
+
+        <!-- tool icons -->
+        <div class="tool-icons"
+          style="grid-column:2/3;grid-row:2/3;align-self:start;animation:slideInRight .5s ease both;animation-delay:.55s;">
+          <div class="tool-badge py">Py</div>
+          <div class="tool-badge pbi">PBI</div>
+          <div class="tool-badge sql">SQL</div>
+        </div>
+
+        <!-- job desc -->
+        <div class="desc-col" style="grid-row:3/4;">
+          <div class="section-heading">Job Desc:</div>
+          <ul class="bullet-list">
+            <li>Built an NLP-based Information Retrieval (IR) system with Python as a decision support tool to
+              accelerate corrective
+              maintenance troubleshooting. Match machine failure complaints with the most relevant historical remedies
+              using
+              semantic similarity with a threshold of 80% similarity score.</li>
+            <li>Designed a text preprocessing pipeline (regex cleaning, normalization, fixing wording inconsistency) and
+              cleaned
+              14,892 maintenance log records using Python (regex, SQLAlchemy, scikit-learn, and SentenceTransformer) and
+              SQL.</li>
+            <li>Built machine maintenance report dashboards to analyze and report machine reliability KPIs (MTTR, MTBF,
+              Availability, Reliability) and the failure occurrence of each machine component across multiple
+              workcenters.</li>
+            <li>Conducted a Failure Mode Classification utilizing PyTorch and Scikit’s MLP with a Macro F1 Score of 81%
+              and 84%</li>
+            <li>Collaborated directly with machine technicians through regular progress discussions using a design
+              thinking
+              framework to ensure real-world applicability.</li>
+          </ul>
+        </div>
+
+        <!-- key learning -->
+        <div class="learn-col" style="grid-row:3/4;">
+          <div class="section-heading">Key Learning:</div>
+          <ul class="bullet-list">
+            <li>Gain exposure to real life implementation of project management using Design Thinking approaches and
+              implement the PDCA cycles.</li>
+            <li>Learned how to present a work in front of users and stakeholders in a non-technical way.</li>
+            <li>Apply data processing skills to handle large-scale text data (14,000+ logs) by cleaning raw unstructured
+              data and building useable data pipelines for analytics and machine learning.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Project mini-cards + certificate side by side -->
+      <div
+        style="padding: 0 48px 20px; display:grid; grid-template-columns:1fr 1fr; gap:24px; animation:fadeUp .5s ease both; animation-delay:.65s;">
+
+        <!-- project cards -->
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="section-heading">Projects:</div>
+          <div style="display:flex;gap:14px;">
+            <div class="proj-mini" onclick="window.location.href='projects.html?id=0'">
+              <div class="proj-thumb proj-thumb-yellow">
+                <img src="assets/projects/ir_project_1.png" alt="Project 1"
+                  style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+                  onerror="this.style.display='none';">
+                <div class="ph ph-triangle" style="transform:translateX(-50%) scale(.6);top:10px;z-index: 1;"></div>
+                <div class="ph ph-star"
+                  style="width:22px;height:22px;bottom:14px;left:20%;animation:spinSlow 10s linear infinite;z-index: 1;">
+                </div>
+                <div class="ph ph-rect" style="width:20px;height:20px;bottom:14px;right:20%;z-index: 1;"></div>
+              </div>
+              <div class="proj-footer">
+                <div class="proj-name">Corrective Maintenance Information Retrieval</div>
+                <div class="proj-kw">IR, NLP, BM25, Cosine Similarity Ranking</div>
+                <button class="proj-more proj-more-yellow">More Details</button>
+              </div>
+            </div>
+            <div class="proj-mini" onclick="window.location.href='projects.html?id=6'">
+              <div class="proj-thumb proj-thumb-pink">
+                <img src="img_experience_1_proj2.jpg" alt="Project 2"
+                  style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+                  onerror="this.style.display='none';">
+                <div class="ph ph-triangle" style="transform:translateX(-50%) scale(.6);top:10px;z-index: 1;"></div>
+                <div class="ph ph-star"
+                  style="width:22px;height:22px;bottom:14px;left:20%;animation:spinSlow 10s linear infinite;z-index: 1;">
+                </div>
+                <div class="ph ph-rect" style="width:20px;height:20px;bottom:14px;right:20%;z-index: 1;"></div>
+              </div>
+              <div class="proj-footer">
+                <div class="proj-name">Failure Mode Classification</div>
+                <div class="proj-kw">DL, MLP, Scikit-Learn, Pytorch, Classification</div>
+                <button class="proj-more proj-more-pink">More Details</button>
+              </div>
+            </div>
+            <div class="proj-mini" onclick="window.location.href='projects.html?id=5'">
+              <div class="proj-thumb proj-thumb-yellow">
+                <img src="assets/projects/knb_project_1.png" alt="Project 3"
+                  style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+                  onerror="this.style.display='none';">
+                <div class="ph ph-triangle" style="transform:translateX(-50%) scale(.6);top:10px;z-index: 1;"></div>
+                <div class="ph ph-star"
+                  style="width:22px;height:22px;bottom:14px;left:20%;animation:spinSlow 10s linear infinite;z-index: 1;">
+                </div>
+                <div class="ph ph-rect" style="width:20px;height:20px;bottom:14px;right:20%;z-index: 1;"></div>
+              </div>
+              <div class="proj-footer">
+                <div class="proj-name">Machine Reliability and Component Occurence Dashboard</div>
+                <div class="proj-kw">Visualization, Data Analysis, Power BI</div>
+                <button class="proj-more proj-more-yellow">More Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- internship certificate -->
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="section-heading">Certificate:</div>
+          <div class="cert-panel" onclick="openExpCertModal('assets/docs/intern_certificate_1.jpg')">
+            <div class="cert-image">
+              <img src="assets/docs/intern_certificate_1.jpg" alt="Internship Certificate"
+                style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+                onerror="this.style.display='none';">
+              <div class="ph ph-triangle" style="transform:translateX(-50%) scale(.9);top:16px;z-index: 1;"></div>
+              <div class="ph ph-star"
+                style="width:44px;height:44px;bottom:20px;left:28%;animation:spinSlow 12s linear infinite;z-index: 1;">
+              </div>
+              <div class="ph ph-rect" style="width:38px;height:38px;bottom:22px;right:25%;z-index: 1;"></div>
+            </div>
+            <div class="cert-label">Internship Certificate</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- bottom navigation -->
+      <div class="detail-nav-row" style="justify-content: space-between;">
+        <button class="prev-exp-btn" onclick="showPage('list',null)">← Back to Experiences</button>
+        <button class="prev-exp-btn" onclick="showDetail('page-detail-2')">Previous Experience →</button>
+      </div>
+
+      <div class="edu-page-footer">
+        <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+        <div class="edu-footer-links">
+          <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+          <a href="mailto:ratunoor003@gmail.com">Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+     PAGE 3 — EXPERIENCE DETAIL (JOB 2)
+  ══════════════════════════════════════ -->
+  <div class="page" id="page-detail-2">
+    <div class="detail-page">
+
+      <!-- Lavender hero -->
+      <div class="detail-hero" id="carousel-container-2">
+        <div class="detail-shapes">
+          <div class="dh-triangle"></div>
+          <div class="dh-star"></div>
+          <div class="dh-rect"></div>
+        </div>
+        <!-- Carousel Container -->
+        <div class="detail-hero-carousel">
+          <div class="carousel-track" id="carousel-track-2">
+            <div class="carousel-slide">
+              <img src="assets/projects/ut_img.jpeg" alt="United Tractors Experience 1"
+                onerror="this.style.display='none';">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/projects/ut_img_2.jpeg" alt="United Tractors Experience 2"
+                onerror="this.style.display='none';">
+            </div>
+            <div class="carousel-slide">
+              <img src="assets/projects/ut_img_3.jpeg" alt="United Tractors Experience 3"
+                onerror="this.style.display='none';">
+            </div>
+          </div>
+          <button class="carousel-arrow prev" onclick="moveExpCarousel(2, -1)">❬</button>
+          <button class="carousel-arrow next" onclick="moveExpCarousel(2, 1)">❭</button>
+          <div class="carousel-indicators" id="carousel-indicators-2">
+            <div class="carousel-dot active" onclick="setExpSlideIndex(2, 0)"></div>
+            <div class="carousel-dot" onclick="setExpSlideIndex(2, 1)"></div>
+          </div>
+        </div>
+        <button class="detail-back" onclick="showPage('list',null)">← Back to Experiences</button>
+      </div>
+
+      <!-- detail title section -->
+      <div class="detail-title-section">
+        <div class="detail-hero-title">
+          <span class="detail-job-name">Data Scientist Intern</span>
+          <span class="detail-separator">·</span>
+          <span class="detail-company">PT United Tractors Tbk</span>
+        </div>
+      </div>
+
+      <!-- Short desc + meta box (2-col) -->
+      <div class="detail-body">
+
+        <!-- left col: short description -->
+        <div style="grid-column:1/2; grid-row:1/2; animation: slideInLeft .5s ease both; animation-delay:.3s;">
+          <p class="detail-short-desc">As part of a two-person team, I contributed to the Coal Price Analysis and
+            Forecasting Project under the Data & Digital Solutions Division. The internship also provided direct
+            mentorship and exposure to the agile development workflow practiced within the division.</p>
+        </div>
+
+        <!-- right col: meta table -->
+        <div class="meta-box">
+          <div class="meta-row">
+            <div class="meta-key">Duration</div>
+            <div class="meta-val">: 09/01/2024 – 08/02/2024 (2 Months)</div>
+            <div class="meta-key">Type</div>
+            <div class="meta-val">: Internship (Program Kerja Lapangan)</div>
+          </div>
+          <div class="meta-row">
+            <div class="meta-key">Tools/Libraries</div>
+            <div class="meta-val">: Python, Pandas, Scikit-Learn,Yahoo Finance, TensorFlow, Keras, PyTorch</div>
+            <div class="meta-key">Keywords</div>
+            <div class="meta-val keywords">: Machine Learning, Time Series, Forecasting, Deep Learning, Data
+              Visualization, Analytics, Statistical Modeling</div>
+          </div>
+        </div>
+
+        <!-- tool icons -->
+        <div class="tool-icons"
+          style="grid-column:2/3;grid-row:2/3;align-self:start;animation:slideInRight .5s ease both;animation-delay:.55s;">
+          <div class="tool-badge py">Py</div>
+          <div class="tool-badge sql">SQL</div>
+        </div>
+
+        <!-- job desc -->
+        <div class="desc-col" style="grid-row:3/4;">
+          <div class="section-heading">Job Desc:</div>
+          <ul class="bullet-list">
+            <li>Collected and cleaned raw coal prices data from Yahoo Finance data for analysis.</li>
+            <li>Developed data visualizations and predictive models (Stacked LSTM) to forecast coal prices.</li>
+            <li>Delivered insights from visualization and forecast result to support data-driven business
+              decision-making on price trends.</li>
+            <li>Created the presentation deck and internship report summarizing project outcomes.</li>
+          </ul>
+        </div>
+
+        <!-- key learning -->
+        <div class="learn-col" style="grid-row:3/4;">
+          <div class="section-heading">Key Learning:</div>
+          <ul class="bullet-list">
+            <li>Gain exposure to the agile development workflow practiced within the division, actively participate in
+              daily scrums, and internship project planning.</li>
+            <li>Gained hands-on experience in data analytics within a corporate environment and learned how data
+              analytics supports business decisions.</li>
+            <li>Improved communication, teamwork, and analytical thinking skills while working in a fast-paced,
+              collaborative setting.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Project mini-cards + certificate side by side -->
+      <div
+        style="padding: 0 48px 20px; display:grid; grid-template-columns:1fr 1fr; gap:24px; animation:fadeUp .5s ease both; animation-delay:.65s;">
+
+        <!-- project cards -->
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="section-heading">Project:</div>
+          <div style="display:flex;gap:14px;">
+            <div class="proj-mini" onclick="window.location.href='projects.html?id=8'">
+              <div class="proj-thumb proj-thumb-yellow">
+                <img src="assets/projects/coal_project_1.png" alt="Project 1"
+                  style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+                  onerror="this.style.display='none';">
+                <div class="ph ph-triangle" style="transform:translateX(-50%) scale(.6);top:10px;z-index: 1;"></div>
+                <div class="ph ph-star"
+                  style="width:22px;height:22px;bottom:14px;left:20%;animation:spinSlow 10s linear infinite;z-index: 1;">
+                </div>
+                <div class="ph ph-rect" style="width:20px;height:20px;bottom:14px;right:20%;z-index: 1;"></div>
+              </div>
+              <div class="proj-footer">
+                <div class="proj-name">Coal Price Forecasting with LSTM & ARIMA</div>
+                <div class="proj-kw">Time Series - Deep Learning - ARIMA - Python - PowerBI</div>
+                <button class="proj-more proj-more-yellow">More Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- internship certificate -->
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div class="section-heading">Certificate:</div>
+          <div class="cert-panel" onclick="openExpCertModal('assets/docs/ut_certificate.jpg')">
+            <div class="cert-image">
+              <img src="assets/docs/ut_certificate.jpg" alt="Internship Certificate"
+                style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;"
+                onerror="this.style.display='none';">
+              <div class="ph ph-triangle" style="transform:translateX(-50%) scale(.9);top:16px;z-index: 1;"></div>
+              <div class="ph ph-star"
+                style="width:44px;height:44px;bottom:20px;left:28%;animation:spinSlow 12s linear infinite;z-index: 1;">
+              </div>
+              <div class="ph ph-rect" style="width:38px;height:38px;bottom:22px;right:25%;z-index: 1;"></div>
+            </div>
+            <div class="cert-label">Internship Certificate</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- bottom navigation -->
+      <div class="detail-nav-row" style="justify-content: space-between;">
+        <button class="prev-exp-btn" onclick="showDetail('page-detail-1')">← Next Experience</button>
+        <button class="prev-exp-btn" onclick="showPage('list',null)">Back to Experiences →</button>
+      </div>
+
+      <div class="edu-page-footer">
+        <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+        <div class="edu-footer-links">
+          <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+          <a href="mailto:ratunoor003@gmail.com">Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showPage(name, linkEl) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      document.querySelectorAll('.nav-inner a').forEach(a => a.classList.remove('active'));
+      if (linkEl) linkEl.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showDetail(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // contact accordion toggle on click
+    document.addEventListener('click', (e) => {
+      const wrapper = document.querySelector('.nav-contact-wrapper');
+      if (!wrapper) return;
+      const isClickInside = wrapper.contains(e.target);
+      if (isClickInside) {
+        const trigger = wrapper.querySelector('.nav-contact');
+        if (trigger && (e.target === trigger || trigger.contains(e.target))) {
+          wrapper.classList.toggle('active');
+        }
+      } else {
+        wrapper.classList.remove('active');
+      }
+    });
+
+    /* ── EXPERIENCE CAROUSELS ── */
+    const expCarouselState = {
+      1: { current: 0, total: 2 },
+      2: { current: 0, total: 2 }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      [1, 2].forEach(id => {
+        const track = document.getElementById(`carousel-track-${id}`);
+        if (track) {
+          const slides = track.querySelectorAll('.carousel-slide');
+          expCarouselState[id].total = slides.length;
+
+          const container = document.getElementById(`carousel-container-${id}`);
+          if (slides.length <= 1) {
+            if (container) {
+              container.querySelectorAll('.carousel-arrow, .carousel-indicators').forEach(el => {
+                el.style.display = 'none';
+              });
+            }
+          }
+        }
+      });
+    });
+
+    function moveExpCarousel(id, direction) {
+      const state = expCarouselState[id];
+      if (!state || state.total <= 1) return;
+      state.current = (state.current + direction + state.total) % state.total;
+      updateExpCarouselPosition(id);
+    }
+
+    function setExpSlideIndex(id, idx) {
+      const state = expCarouselState[id];
+      if (!state) return;
+      state.current = idx;
+      updateExpCarouselPosition(id);
+    }
+
+    function updateExpCarouselPosition(id) {
+      const state = expCarouselState[id];
+      const track = document.getElementById(`carousel-track-${id}`);
+      if (track) {
+        track.style.transform = `translateX(-${state.current * 100}%)`;
+      }
+      const dots = document.querySelectorAll(`#carousel-indicators-${id} .carousel-dot`);
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === state.current);
+      });
+    }
+  </script>
+
+  <!-- Fullscreen Certificate Viewer Modal -->
+  <div class="cert-modal-overlay" id="exp-cert-modal-overlay" onclick="closeExpCertModal(event)"
+    style="position: fixed; inset: 0; background: rgba(20,16,30,0.55); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 24px; backdrop-filter: blur(4px);">
+    <div class="cert-modal"
+      style="background: #ffffff; border-radius: 20px; overflow: hidden; width: 100%; max-width: 900px; height: 85vh; box-shadow: 0 24px 64px rgba(0,0,0,0.22); position: relative; display: flex; flex-direction: column;">
+      <button class="cert-modal-close" onclick="closeExpCertModalDirect()"
+        style="position: absolute; top: 14px; right: 14px; z-index: 2010; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.85); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #555; transition: background 0.2s, transform 0.2s;">✕</button>
+      <div id="exp-modal-content-area"
+        style="flex: 1; width: 100%; height: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #fafafa;">
+        <!-- dynamic content -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── CERTIFICATE MODAL CONTROLLER ── */
+    function openExpCertModal(fileSrc) {
+      const overlay = document.getElementById('exp-cert-modal-overlay');
+      const contentArea = document.getElementById('exp-modal-content-area');
+      if (!overlay || !contentArea) return;
+
+      const isPdf = fileSrc.toLowerCase().endsWith('.pdf');
+      if (isPdf) {
+        contentArea.innerHTML = `<iframe src="${fileSrc}" style="width:100%; height:100%; border:none;"></iframe>`;
+      } else {
+        contentArea.innerHTML = `<img src="${fileSrc}" alt="Internship Certificate" style="max-width:100%; max-height:100%; object-fit:contain; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">`;
+      }
+
+      overlay.style.display = 'flex';
+    }
+
+    function closeExpCertModal(e) {
+      const overlay = document.getElementById('exp-cert-modal-overlay');
+      if (e.target === overlay) {
+        closeExpCertModalDirect();
+      }
+    }
+
+    function closeExpCertModalDirect() {
+      const overlay = document.getElementById('exp-cert-modal-overlay');
+      const contentArea = document.getElementById('exp-modal-content-area');
+      if (overlay) overlay.style.display = 'none';
+      if (contentArea) contentArea.innerHTML = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeExpCertModalDirect();
+    });
+  </script>
+</body>
+
+</html>

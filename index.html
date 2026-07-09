@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratu Noor - Portfolio Landing Page</title>
+  <link rel="icon" href="assets/docs/logo.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- wavy SVG filter -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="wavy" x="-20%" y="-20%" width="140%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Ratu Noor</a>
+    <div class="nav-inner">
+      <a href="experiences.html">Experiences</a>
+      <a href="projects.html">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="certifications.html">Certificates</a>
+      <a href="index.html" class="main-menu">Main Menu</a>
+    </div>
+    <div class="nav-contact-wrapper">
+      <div class="nav-contact plaid-blue">Contact Me</div>
+      <div class="nav-contact-dropdown">
+        <a href="https://wa.me/6282299331193" target="_blank">WhatsApp</a>
+        <a href="mailto:ratunoor003@gmail.com">Gmail</a>
+        <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ratunoor" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HERO SECTION ── -->
+  <div class="hero-section">
+
+    <div class="blob blob-blue">
+      <img src="assets/docs/professional_photo.png" alt="Hero Image 1" class="blob-img">
+    </div>
+
+    <div class="blob blob-green">
+      <img src="assets/projects/knb_project_1.png" alt="Hero Image 2" class="blob-img">
+    </div>
+
+    <div class="blob blob-yellow">
+      <img src="assets/projects/peruri_img.jpeg" alt="Hero Image 3" class="blob-img">
+    </div>
+
+    <div class="blob blob-pink">
+      <img src="assets/projects/ir_project_1.png" alt="Hero Image 4" class="blob-img">
+    </div>
+
+    <div class="hero-text">
+      <div>
+        <span class="hero-hello">Hello,</span>
+        <span class="hero-rest"> you can call me Ratu.</span>
+      </div>
+      <div class="hero-tagline">
+        a Data Science Tech Graduate Who Values
+        <span class="green">Growth</span>,<br>
+        <span class="olive">Innovation</span>,
+        <span class="pink">Professionalism</span>, and
+        <span class="yellow">User-oriented Solutions</span>.
+      </div>
+      <div class="hero-field">Data Science, Analytics &amp; AI</div>
+      <div class="hero-cta-row">
+        <a href="assets/docs/CV-Ratu.pdf" target="_blank" class="cv-button plaid-green">View CV</a>
+        <a href="mailto:ratunoor003@gmail.com" class="cv-button plaid-pink">Email Me</a>
+        <a href="https://www.linkedin.com/in/ratu-noor-hasannah/" target="_blank"
+          class="cv-button plaid-blue">LinkedIn</a>
+        <a href="https://github.com/RatuNoor" target="_blank" class="cv-button plaid-yellow">GitHub</a>
+      </div>
+    </div>
+
+    <div class="journey-arrow">
+      <span>More About My<br>Journey</span>
+      <div class="arrow-line"></div>
+    </div>
+
+  </div>
+
+  <!-- ── MOSAIC GRID ── -->
+  <div class="mosaic-section">
+
+    <!-- ROW 1 -->
+    <div class="mosaic-row">
+      <div class="row-label">
+        I Previously interned as a<br>
+        Maintenance Data Analyst<br>
+        (Machine Learning)
+      </div>
+      <div class="img-card card-lg">
+        <img src="assets/projects/peruri_img.jpeg" alt="Portfolio Image 1" class="mosaic-img">
+      </div>
+      <div class="img-card card-lg">
+        <img src="assets/projects/peruri_img_3.jpeg" alt="Portfolio Image 2" class="mosaic-img">
+      </div>
+      <div class="plaid-card plaid-blue card-lg" onclick="location.href='experiences.html'">
+        More About My<br>Job Experience</div>
+      <div class="img-card card-lg">
+        <img src="assets/projects/peruri_img_1.jpeg" alt="Portfolio Image 3" class="mosaic-img">
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="mosaic-row">
+      <div class="img-card card-md">
+        <img src="assets/projects/knb_project_2.png" alt="Portfolio Image 4" class="mosaic-img">
+      </div>
+      <div class="img-card card-md">
+        <img src="assets/projects/ir_project_2.png" alt="Portfolio Image 5" class="mosaic-img">
+      </div>
+      <div class="plaid-card plaid-green card-md" onclick="location.href='projects.html'">More About My<br>Projects
+      </div>
+      <div class="row-label">
+        Built multiple project<br>
+        around Machine<br>
+        Learning, Time Series,<br>
+        NLP, Visualization,<br>
+        Statistics
+      </div>
+      <div class="img-card card-md">
+        <img src="assets/projects/thesis_img_2.png" alt="Portfolio Image 6" class="mosaic-img">
+      </div>
+      <div class="img-card card-md">
+        <img src="assets/projects/knb_project_1.png" alt="Portfolio Image 7" class="mosaic-img">
+      </div>
+    </div>
+
+    <!-- ROW 3 -->
+    <div class="mosaic-row">
+      <div class="plaid-card plaid-pink card-lg">More About My<br>Education</div>
+      <div class="img-card card-lg">
+        <img src="assets/images/personal_img.jpeg" alt="Portfolio Image 8" class="mosaic-img">
+      </div>
+      <div class="img-card card-lg">
+        <img src="assets/images/personal_img_3.jpeg" alt="Portfolio Image 9" class="mosaic-img">
+      </div>
+      <div class="img-card card-lg">
+        <img src="assets/images/personal_img_2.jpeg" alt="Portfolio Image 10" class="mosaic-img">
+      </div>
+      <div class="img-card card-lg">
+        <img src="assets/images/personal_img_4.jpeg" alt="Portfolio Image 11" class="mosaic-img">
+      </div>
+      <div class="row-label right">
+        Graduated from<br>
+        Airlangga University,<br>
+        majoring in Data<br>
+        Science Technology.
+      </div>
+    </div>
+
+    <!-- ROW 4 -->
+    <div class="mosaic-row">
+      <div class="img-card card-md">
+        <img src="assets/certificates/certificate_awscloud.jpg" alt="AWS Cloud Security Certificate" class="mosaic-img">
+      </div>
+      <div class="row-label">
+        Learn like you're<br>
+        gonna live<br>
+        forever
+      </div>
+      <div class="plaid-card plaid-yellow card-md">Training &amp;<br>Certifications</div>
+      <div class="img-card card-md">
+        <img src="assets/certificates/certificate_powerbi_udemy.jpg" alt="PowerBI Certificate" class="mosaic-img">
+      </div>
+      <div class="img-card card-md">
+        <img src="assets/certificates/certificate_designthinking.jpg" alt="Design Thinking Certificate"
+          class="mosaic-img">
+      </div>
+      <div class="img-card card-md">
+        <img src="assets/certificates/certificate_ef.jpg" alt="EF Certificate" class="mosaic-img">
+      </div>
+    </div>
+    <div class="edu-page-footer">
+      <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+      <div class="edu-footer-links">
+        <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+        <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+        <a href="mailto:ratunoor003@gmail.com">Email</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const rows = document.querySelectorAll('.mosaic-row');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const row = entry.target;
+          const idx = [...rows].indexOf(row);
+          setTimeout(() => row.classList.add('visible'), idx * 120);
+          observer.unobserve(row);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    rows.forEach(row => observer.observe(row));
+
+    document.addEventListener('click', (e) => {
+      const wrapper = document.querySelector('.nav-contact-wrapper');
+      if (!wrapper) return;
+      const isClickInside = wrapper.contains(e.target);
+      if (isClickInside) {
+        const trigger = wrapper.querySelector('.nav-contact');
+        if (trigger && (e.target === trigger || trigger.contains(e.target))) {
+          wrapper.classList.toggle('active');
+        }
+      } else {
+        wrapper.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+
+</html>

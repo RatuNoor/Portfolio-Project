@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratu Noor — Projects</title>
+  <link rel="icon" href="assets/docs/logo.png" type="image/x-icon">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="index.html" class="nav-logo">Ratu Noor</a>
+    <div class="nav-inner">
+      <a href="experiences.html">Experiences</a>
+      <a href="#" class="active" onclick="showPage('list')">Projects</a>
+      <a href="education.html">Education</a>
+      <a href="certifications.html">Certificates</a>
+      <a href="index.html">Main Menu</a>
+    </div>
+    <div class="nav-contact-wrapper">
+      <div class="nav-contact plaid-blue">Contact Me</div>
+      <div class="nav-contact-dropdown">
+        <a href="https://wa.me/6282299331193" target="_blank">WhatsApp</a>
+        <a href="mailto:ratunoor003@gmail.com">Gmail</a>
+        <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ratunoor" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+     PAGE 1 — PROJECTS LIST
+════════════════════════════════════ -->
+  <div class="page active" id="page-list">
+    <div class="list-wrap">
+
+      <div class="list-eyebrow">Highlighted Data Works</div>
+      <div class="list-title">Projects</div>
+
+      <!-- filter pills -->
+      <div class="filter-row">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="ml">Machine Learning</button>
+        <button class="filter-pill" data-filter="nlp">NLP</button>
+        <button class="filter-pill" data-filter="ts">Time Series</button>
+        <button class="filter-pill" data-filter="viz">Visualization</button>
+        <button class="filter-pill" data-filter="stats">Statistics</button>
+      </div>
+
+      <!-- 4-col grid, 2 rows = 8 cards -->
+      <div class="proj-grid" id="proj-grid">
+      </div>
+
+      <!-- pagination -->
+      <div class="pagination" id="proj-pagination">
+      </div>
+      <div class="edu-page-footer">
+        <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+        <div class="edu-footer-links">
+          <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+          <a href="mailto:ratunoor003@gmail.com">Email</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════
+     PAGE 2 — PROJECT DETAIL
+════════════════════════════════════ -->
+  <div class="page" id="page-detail">
+    <div class="detail-wrap">
+
+      <!-- hero -->
+      <div class="detail-hero" id="detail-hero-banner">
+        <div class="hero-shapes">
+          <div class="hs-tri"></div>
+          <div class="hs-star"></div>
+          <div class="hs-rect"></div>
+        </div>
+        <!-- Carousel Container -->
+        <div class="detail-hero-carousel" id="detail-carousel-container">
+          <div class="carousel-track" id="detail-carousel-track"></div>
+          <button class="carousel-arrow prev" id="detail-carousel-prev" onclick="moveCarousel(-1)">❬</button>
+          <button class="carousel-arrow next" id="detail-carousel-next" onclick="moveCarousel(1)">❭</button>
+          <div class="carousel-indicators" id="detail-carousel-indicators"></div>
+        </div>
+        <button class="detail-back" onclick="showPage('list')">← Back to Projects</button>
+      </div>
+
+      <!-- detail title section -->
+      <div class="detail-title-section">
+        <div class="detail-hero-title">
+          <span id="detail-title">NLP Maintenance Classifier</span>
+          <span class="sep">·</span>
+          <span class="company" id="detail-type">Machine Learning</span>
+        </div>
+      </div>
+
+      <!-- meta strip -->
+      <div class="meta-strip">
+        <div class="meta-cell">
+          <div class="meta-key">Duration</div>
+          <div class="meta-val" id="detail-duration">Jan 2024 – Jun 2024 (6 months)</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Tools / Libraries</div>
+          <div class="meta-val tools" id="detail-tools">Python · SQL · Power BI · TensorFlow · Transformer · Numpy ·
+            Pandas</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Keywords</div>
+          <div class="meta-val keywords" id="detail-keywords">NLP · Information Retrieval · Dashboard · Visualization ·
+            Time Series · Text Classification · Failure Mode</div>
+        </div>
+        <div class="meta-cell">
+          <div class="meta-key">Type</div>
+          <div class="meta-val" id="detail-project-type">Internship / Academic</div>
+        </div>
+      </div>
+
+
+      <!-- body -->
+      <div class="detail-body">
+
+        <!-- PROJECT OVERVIEW — full width -->
+        <div class="section-block full anim-block">
+          <div class="section-title" style="color:var(--blue-dark)">
+            <div class="accent-dot" style="background:var(--blue-mid)"></div>
+            Project Overview
+          </div>
+          <div class="section-divider" style="color:var(--blue-light)"></div>
+          <div class="section-text" id="detail-overview">
+            This project was developed during my internship...
+          </div>
+        </div>
+
+        <!-- PROBLEM STATEMENT — left -->
+        <div class="section-block anim-block">
+          <div class="section-title" style="color:var(--pink-dark)">
+            <div class="accent-dot" style="background:var(--pink-mid)"></div>
+            Problem Statement
+          </div>
+          <div class="section-divider" style="color:var(--pink-light)"></div>
+          <div class="section-text" id="detail-problem">
+            Equipment maintenance reports were recorded manually...
+          </div>
+          <ul class="bullet-list" style="margin-top:8px;" id="detail-bullets">
+            <li>Over 500 unstructured reports...</li>
+          </ul>
+        </div>
+
+        <!-- METHODOLOGY — right -->
+        <div class="section-block anim-block">
+          <div class="section-title" style="color:var(--green-dark)">
+            <div class="accent-dot" style="background:var(--green-mid)"></div>
+            Methodology
+          </div>
+          <div class="section-divider" style="color:var(--green-light)"></div>
+          <div class="method-steps" id="detail-steps">
+            <!-- dynamically populated -->
+          </div>
+        </div>
+
+        <!-- RESULT — full width -->
+        <div class="section-block full anim-block">
+          <div class="section-title" style="color:var(--yellow-dark)">
+            <div class="accent-dot" style="background:var(--yellow-mid)"></div>
+            Results
+          </div>
+          <div class="section-divider" style="color:var(--yellow-light)"></div>
+          <div class="result-grid" id="detail-results">
+            <!-- dynamically populated -->
+          </div>
+          <div class="section-text" style="margin-top:14px;" id="detail-result-desc">
+            The deployed model...
+          </div>
+        </div>
+
+      </div><!-- end detail-body -->
+
+      <!-- CTA buttons -->
+      <div class="cta-row" id="detail-ctas">
+        <a href="#" target="_blank" class="cta-btn btn-deck" id="detail-deck-link">
+          View Deck / Presentation
+        </a>
+        <a href="#" target="_blank" class="cta-btn btn-github" id="detail-github-link">
+          View on GitHub
+        </a>
+        <a href="#" target="_blank" class="cta-btn btn-report" id="detail-report-link">
+          View Report / Documentation
+        </a>
+      </div>
+
+      <!-- bottom nav -->
+      <div class="detail-nav-row">
+        <button class="nav-arrow left" onclick="showPage('list')">← Back to All Projects</button>
+        <button class="nav-arrow right" id="detail-next-btn">Next Project →</button>
+      </div>
+      <div class="edu-page-footer">
+        <div class="edu-footer-left">Ratu · Data Science & AI · Bekasi, Indonesia</div>
+        <div class="edu-footer-links">
+          <a href="https://linkedin.com/in/ratu-noor-hasannah" target="_blank">LinkedIn</a>
+          <a href="https://github.com/RatuNoor" target="_blank">GitHub</a>
+          <a href="mailto:ratunoor003@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* ── PROJECT DATA ── */
+    const projects = [
+      {
+        id: 0,
+        name: 'Multi-Stage Information Retrieval for Recommended Remedy Action in Corrective Maintenance',
+        kw: 'NLP · IR · Python · MySQL',
+        color: 'lavender',
+        img: 'assets/projects/ir_project_1.png',
+        imgs: ['assets/projects/ir_project_1.png', 'assets/projects/ir_project_2.png', 'assets/projects/peruri_img.jpeg'],
+        type: 'NLP',
+        categories: ['nlp', 'ml'],
+        duration: 'Nov 2025 – April 2026 (5 months)',
+        tools: 'Python · SQL · Sentence Transformer · TensorFlow · Scikit-learn · Numpy · Pandas',
+        keywords: 'NLP · Information Retrieval · Corrective Maintenance ·',
+        projectType: 'Internship',
+        overview: 'This project was developed during my internship as a Maintenance Data Analyst at Peruri. The goal was to utillize the existing corrective mantenance log reports, and to develop a pipeline that can be used to clean or to preprocess the respecting data in the future. Further, an Information Retrieval approach was used to assign new logs with historical remedy that are used in similar failure case based on text damage similarity, machine name, workcenter, machine part, and production plant. The system combines BM25 keyword retrieval with Sentence-BERT semantic search to recommend relevant historical maintenance solutions based on new machine failure reports. To improve retrieval quality, the pipeline includes extensive domain-specific text preprocessing, terminology standardization, machine name normalization. The solution helps maintenance engineers retrieve accurate repair recommendations more efficiently while preserving valuable troubleshooting knowledge from historical maintenance records.',
+        problem: 'The maintenance logbooks contain valuable troubleshooting knowledge, but retrieving relevant repair history is challenging due to inconsistent terminology, typing errors, and unstructured maintenance descriptions.',
+        bullets: [
+          'Up to 14.000 historical maintenance records that are messy, unorganized, lacked consistent formatting, writing styles, abbreviations, slang, and technical terminologies, submitted from 2022 until 2026.',
+          'Maintenance Log as valuable data were not fully utilized to improve overall maintenance performance.',
+          'Conventional keyword search often fails to identify semantically similar machine failures described using different wording.'
+        ],
+        steps: [
+          { num: 0, title: 'Project Background & Data Understanding', desc: 'Understanding the stucture of existing maintenance log data, how the reporting process works when failure occurs, exploring potential approach/methods to implement in this project.' },
+          { num: 1, title: 'Data Collection', desc: 'Collect historical maintenance logbooks from banknote and coin production machines maintenance logs.' },
+          { num: 2, title: 'Cleaning & Preprocessing', desc: 'Standardize maintenance text by correcting typos, technical terms, abbreviations, and inconsistent machine/component naming.' },
+          { num: 3, title: 'Knowledge Base Construction', desc: 'Generate Sentence-BERT embeddings and store processed records in MySQL.' },
+          { num: 4, title: 'User Query Processing', desc: 'Receive a new maintenance complaint and apply the same preprocessing pipeline.' },
+          { num: 5, title: 'Candidate Retrieval (BM25)', desc: 'Retrieve the most relevant historical cases using keyword-based ranking.' },
+          { num: 6, title: 'Semantic Re-ranking (Sentence-BERT)', desc: 'Re-rank BM25 candidates using Sentence-BERT cosine similarity for semantic relevance.' },
+          { num: 7, title: 'Final Recommendation', desc: 'Return the Top-3 most relevant remedies, the most frequent solution, and the predicted failure mode.' },
+          { num: 8, title: 'Evaluation & Deployment', desc: 'Save the recommendation results into the database for future analysis and reporting.' }
+        ],
+        results: [
+          { num: '14.892', label: 'Cleaned Logs', bg: 'var(--blue-light)', border: '#90b8e8', color: 'var(--blue-dark)' },
+          { num: '728', label: 'Rows of dictionary contains typos, technical terms, abbr, and slangs used for logs correction.', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: '82%', label: 'F1 Score in Testing.', bg: 'var(--pink-light)', border: 'var(--pink-mid)', color: 'var(--pink-dark)' }
+        ],
+        resultDesc: 'The proposed Information Retrieval system successfully retrieves historical maintenance cases that are semantically relevant to newly reported machine failures. By combining BM25 filtering with Sentence-BERT semantic similarity, the system narrows down candidate records efficiently while maintaining high retrieval relevance. In addition to recommending historical remedies, the system also predicts the most probable failure mode and prioritizes cases with matching machine error codes when available. The complete retrieval pipeline is supported by a structured MySQL knowledge base, enabling fast recommendation generation for maintenance engineers.',
+        deckLink: '#',
+        githubLink: '#',
+        reportLink: 'https://drive.google.com/file/d/158zc75f-cG5_njA7tCJGvuoQXpC23ByG/view?usp=sharing'
+      },
+      {
+        id: 1,
+        name: 'WTI Crude Oil Price Prediction Using LSTM, Kalman Filter, and PSO',
+        kw: 'Time Series · LSTM · Deep Learning · PSO',
+        color: 'blue',
+        img: 'assets/projects/thesis_img_3.png',
+        imgs: ['assets/projects/thesis_img_1.png', 'assets/projects/thesis_img_2.png', 'assets/projects/thesis_img_3.png', 'assets/projects/thesis_img_4.png'],
+        type: 'Time Series & Deep Learning',
+        categories: ['ts', 'ml'],
+        duration: 'Aug 2024 – Jun 2025 (11 months)',
+        tools: 'Python · TensorFlow · Scikit-learn · Numpy · Pandas · Plotly · YFinance',
+        keywords: 'LSTM · PSO · Time Series · Deep Learning',
+        projectType: 'Thesis Project',
+        overview: 'This is my thesis project, I utilize the LSTM (Long-Short Term Memory) models to predict the West Texas Intermediate (WTI) Crude Oil daily future prices. Also implemented the Kalman Filter model into the LSTM as a hybrid model with an assumption of further increasing perfomances and accuracy. And PSO for Hyperparameter Tuning.',
+        problem: 'Oil prices have experienced extreme volatility in recent years, with significant price swings caused by geopolitical factors, supply chain disruptions, and economic instability. While numerous studies have attempted to forecast oil prices using various statistical and machine learning models, accurately predicting short-term price movements remains a persistent challenge.',
+        bullets: [
+          'What are the characteristics of the data?',
+          'How to handle missing values in commodity price data?',
+          'How to determine the optimal hyperparameter value in each model LSTM and LSTM-KF respectively?',
+          'What is the optimal hyperparameters value in each LSTM and LSTM-KF model?',
+          'How is the performance of each model LSTM and LSTM-KF in predicting the WTI Crude Oil prices respectively?'
+        ],
+        steps: [
+          { num: 1, title: 'Data Scraping', desc: 'Collecting WTI Crude Oil historical data from August 2000 until December 2024 using yfinance. And do further preprocessing.' },
+          { num: 2, title: 'Aggregation & Preprocessing', desc: 'Selecting features to be used in the model. Handle missing values using forward fill. Min-Max scalling and made data windows. Splitting the data into training and testing sets.' },
+          { num: 3, title: 'Model Building', desc: 'Building LSTM and LSTM-KF models. And training the models using the training set.' },
+          { num: 4, title: 'Hyperparameter Tuning', desc: 'Optimizing the hyperparameters for both LSTM and LSTM-KF models using PSO.' },
+          { num: 5, title: 'Evaluation & Visualization', desc: 'Evaluate the performance of both models using MSE and MAPE measures. And visualize the results using Plotly.' }
+        ],
+        results: [
+          { num: 'LSTM', label: 'Outperform LSTM-KF in price prediction', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' },
+          { num: '7.51', label: 'MSE of LSTM-KF', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: '2.64%', label: 'MAPE of LSTM-KF', bg: 'var(--pink-light)', border: 'var(--pink-mid)', color: 'var(--pink-dark)' },
+          { num: 'PSO', label: 'Greatly Improve LSTM Performance', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' }
+        ],
+        resultDesc: 'The WTI prices tend to fluctuate, especially since it heavily dependent on the economic state. The ‘missing’ value in commodity price data might be because of the market are closed, but the missing value that occurred because of data merging need to be forward-filled.PSO (Particle Swarm Optimization) provides an efficient alternative to GridSearch for hyperparameter tuning while maintaining good accuracy. The LSTM model still outperform the LSTM-KF model with MSE of 7.51 and MAPE of 2.64%',
+        deckLink: 'https://www.canva.com/design/DAGaAioR_2A/-glcslLhHfU7gVdnP8jS5w/view?utm_content=DAGaAioR_2A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h15ec55443f',
+        githubLink: 'https://github.com/RatuNoor/WTI-Forecasting',
+        reportLink: 'https://drive.google.com/file/d/1SKWtY5t64NYabb4_LRoTn1cdq0bIP3R8/view?usp=drive_link'
+      },
+      {
+        id: 2,
+        name: 'Survival Analysis: The Recurrence of Drug Use',
+        kw: 'Survival Analysis · Machine Learning · Statistical Analysis',
+        color: 'green',
+        img: 'assets/projects/img_project_2.jpg',
+        type: 'Survival Analysis',
+        categories: ['survival', 'stats'],
+        duration: 'November 2024 – December 2024 (1 month)',
+        tools: 'Python · Lifelines · Pandas · NumPy · SciPy · Matplotlib',
+        keywords: 'Survival Analysis · Machine Learning',
+        projectType: 'Academic Project',
+        overview: 'One of my college assignment, this research aimed to analyze factors influencing relapse time among drug rehabilitation patients using survival analysis methods. The Stratified Cox Proportional Hazard (Cox PH) model was applied to handle non-proportional hazards across different treatment types.',
+        problem: 'Despite the availability of various treatment programs, relapse rates among drug users remain a significant public health concern. Understanding the factors that influence the time to relapse is crucial for developing effective prevention and intervention strategies. Furthermore, traditional statistical methods may not be able to adequately capture the complexities of survival data, such as censoring and time-varying covariates.',
+        bullets: [
+          'What factors significantly influence relapse time after treatment?',
+          'How to handle non-proportional hazard violations in survival data?',
+          'Which patient or treatment characteristics contribute most to relapse risk?'
+        ],
+        steps: [
+          { num: 1, title: 'Data Collection & Preprocessing', desc: 'Collected Data from the UMARU Impact Study (UIS) dataset, which consists of 575 observations and 11 variables related to drug treatment programs.' },
+          { num: 2, title: 'StatDesc & EDA', desc: 'To understand the general characteristics and distribution of the data, and to identify patterns and insights within the numerical and categorical variables.' },
+          { num: 3, title: 'Proportional Hazard (PH) Asumption Test', desc: 'Used the Goodness of Fit Test: Schoenfeld Residuals, to determine if variables met the constant hazard ratio assumption required for Cox modeling.' },
+          { num: 4, title: 'Kaplan-Meier & Log-Rank Test', desc: 'Used the Kaplan-Meier estimator to visualize survival curves for different subgroups, and the Log-Rank test to assess statistical significance.' },
+          { num: 5, title: 'Stratified Cox Proportional Hazard (PH) Model', desc: 'a Stratified Cox model was implemented using "los" as the strata to account for different baseline hazards' },
+          { num: 6, title: 'Significance Testing & Hazard Ratio Analysis', desc: 'Both simultaneous (Likelihood Ratio Test) and partial (Wald Test) significance tests were conducted to identify which specific predictor variables significantly influenced drug relapse. The hazard ratios (exp(coef)) were calculated and analyzed to compare the risk rates for each significant variable' }
+        ],
+        results: [
+          { num: '4', label: 'Variables Significantly Associated with Drug Relapse', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' },
+          { num: '↑18%', label: 'Risk of Drug Relapse Increases by Having a History of Intravenous Drug Use', bg: 'var(--pink-light)', border: 'var(--pink-mid)', color: 'var(--pink-dark)' },
+          { num: '↓3%', label: 'Risk of Drug Relapse Decreases for Each Additional Year of Age', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: '↑3%', label: 'Risk of Drug Relapse Increases for Each Additional Previous Drug Treatment', bg: 'var(--yellow-light)', border: '#fad775', color: '#854f0b' },
+          { num: '↓18%', label: 'Lower Risk of Relapse for Patients Undergoing Long-term Treatment', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' }
+        ],
+        resultDesc: 'Results indicated that the risk of relapse is significantly reduced by older age and longer treatment durations, while a history of intravenous drug use and higher counts of previous drug treatments increase the risk. Visual analysis through Kaplan-Meier curves further confirmed that long-term treatment are associated with higher survival probabilities, meaning a longer time until potential relapse. Meanwhile other factors such as depression scores (beck), specific drug types (hercoc), and the treatment site (site) did not significantly impact relapse rates.',
+        deckLink: 'https://www.canva.com/design/DAGXmYb7PSg/DD3T2GLzUOP_VhroK_c9-w/view?utm_content=DAGXmYb7PSg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8b95b025bf',
+        githubLink: '#',
+        reportLink: 'https://drive.google.com/file/d/1u0t6D2FYFgGJAXzI5kml5T7tmEqIQkr0/view'
+      },
+      {
+        id: 3,
+        name: 'Spatial and Linear Regression Approach: Gender Inequality Index Analysis and Mapping in West Nusa Tenggara (2023)',
+        kw: 'Spatial Analysis · Linear Regression',
+        color: 'pink',
+        img: 'assets/projects/spatial_project_2.jpg',
+        imgs: ['assets/projects/spatial_project.jpg', 'assets/projects/spatial_project_2.jpg'],
+        type: 'Spatial Analysis',
+        categories: ['spatial', 'linear_regression', 'stats'],
+        duration: 'June 2024',
+        tools: 'R · Python · Geopandas · Scikit-learn · Matplotlib · Seaborn',
+        keywords: 'Spatial Analysis · Linear Regression',
+        projectType: 'Academic Project',
+        overview: 'This project analyzed gender inequality across districts in West Nusa Tenggara (NTB) using spatial and regression analysis. Although spatial autocorrelation tests showed no significant spatial patterns, a multiple linear regression model was applied to identify key socio-economic factors influencing the Gender Inequality Index (GII) in 2023.This project focused on NTB because it has the highest GII value in Indonesia according to the Central Bureau of Statistics (BPS). By examining indicators of health, education, and labor, the research aims to provide insights for policies that effectively reduce regional gender disparities',
+        problem: 'The Gender Inequality Index (GII) in West Nusa Tenggara (NTB) remains a pressing issue, with existing research often focusing on provincial-level analysis or broad national trends. This limits the understanding of district-specific disparities and the localized socio-economic factors that drive these inequalities within the province. Furthermore, while the GII is a critical indicator of gender inequality, its spatial distribution and the specific drivers at the district level have not been adequately explored using modern spatial and regression analysis techniques.',
+        bullets: [
+          'Is there a spatial pattern or clustering of gender inequality across districts?',
+          'What are the main factors influencing gender inequality in NTB?',
+          'How can regression analysis quantify the effect of education, economy, and health variables on GII?'
+        ],
+        steps: [
+          { num: 1, title: 'Data Acquisition & Preparation', desc: 'Secondary data was collected from BPS NTB for the year 2023, covering 10 regencies/cities and involving one dependent variable (GII) and seven independent variables' },
+          { num: 2, title: 'StatDesc & EDA', desc: 'Researchers used bar plots, scatter plots, and mapping to visualize the distribution of GII and compare NTB\'s indicators with D.I. Yogyakarta' },
+          { num: 3, title: 'Spatial Depedency & Heterogeneity Testing', desc: 'Moran’s I and Breusch-Pagan tests were conducted to detect spatial dependency and spatial heterogeneity across the region' },
+          { num: 4, title: 'Backward Elimination ', desc: 'Used backward elimination method to select the most relevant independent variables' },
+          { num: 5, title: 'Multiple Linear Regression Modeling', desc: 'Conducted multiple linear regression analysis to identify key socio-economic drivers of GII' },
+          { num: 6, title: 'Assumptions & Significance Testing', desc: 'Performed classical assumption tests (normality, homoscedasticity, multicollinearity) and evaluated model performance using R², adjusted R², and F-statistic, interpreting coefficients to understand factor impacts' }
+        ],
+        results: [
+          { num: '83%', label: 'R-Squared Score', bg: 'var(--pink-light)', border: 'var(--pink-mid)', color: 'var(--pink-dark)' },
+          { num: '0,524', label: 'Average GII in NTB 2023', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: '2', label: 'Significant Variables', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' }
+        ],
+        resultDesc: 'This project highlighted the importance of diagnostic testing before selecting the right model. Even though spatial regression was not applicable, performing multiple regression allowed deeper interpretation of socio-economic factors influencing gender inequality. The analysis indicates that the average GII in NTB is 0.524, with low variation between its regencies, suggesting a relatively homogenous level of inequality across the province. While the identified model is statistically significant as a whole, individual variables were sometimes found to be non-significant at the 5% level, suggesting that additional factors like informal economic participation or gender-based violence should be explored in future studies. Ultimately, the results highlight that improving maternal health access and overall gender development are critical to lowering the high inequality index in the region.',
+        deckLink: '#',
+        githubLink: '#',
+        reportLink: 'https://drive.google.com/file/d/1cdN-1KFKKjsAPQddCgUgUdpCA3YAT34O/view'
+      },
+      {
+        id: 4,
+        name: 'Felidae Image Classification Using CNN and Pre-Trained EfficientNetB5',
+        kw: 'Computer Vision · Deep Learning · Image Mining Image Classification',
+        color: 'yellow',
+        img: 'assets/projects/felidae_project.jpg',
+        type: 'Image Mining Deep Learning',
+        categories: ['im', 'dl'],
+        duration: 'November 2023 (a month)',
+        tools: 'Python · TensorFlow · Keras · Scikit-learn · Pandas',
+        keywords: 'Deep Learning · CNN · Transfer Learning · Image Classification · Image Mining',
+        projectType: 'Academic Project',
+        overview: 'This project focused on classifying Felidae species (such as lions, tigers, leopards, jaguars, and cheetahs) using a Convolutional Neural Network (CNN) built on a pre-trained EfficientNetB5 model. Transfer learning was applied to improve training efficiency on a relatively small dataset (243 total images). The model achieved high validation accuracy with minimal overfitting.',
+        problem: 'The Felidae family is one of the most charismatic and endangered groups of mammals globally, yet obtaining sufficient labeled image data for training deep learning models is challenging. Traditional CNN models require large datasets to achieve high accuracy, whereas camera trap and field survey data for wild cats is often limited and imbalanced. This scarcity of data makes accurate automatic species identification difficult, hindering conservation monitoring efforts.',
+        bullets: [
+          'How can a CNN model accurately classify Felidae species from images?',
+          'Does using a pre-trained model (EfficientNetB5) improve performance compared to training from scratch?',
+          'How can data augmentation and regularization prevent overfitting on a limited dataset?'
+        ],
+        steps: [
+          { num: 1, title: 'Data Collection and Preprocessing', desc: 'Collected and preprocessed the Felidae image dataset, ensuring proper labeling and augmentation strategies.' },
+          { num: 2, title: 'Augmentation', desc: 'Built a hybrid model combining Prophet (for holiday/seasonality) and XGBoost (for residual non-linear patterns).' },
+          { num: 3, title: 'Split Data & Modelling (Transfer Learning)', desc: 'Split data into training, validation, and testing sets, and applied transfer learning using EfficientNetB5.' },
+          { num: 4, title: 'Model Validation & Testing', desc: 'Evaluated model performance using accuracy, precision, recall, and F1-score metrics.' }
+        ],
+        results: [
+          { num: '95%', label: 'Accuracy Score on Validation', bg: 'var(--yellow-light)', border: '#fad775', color: '#854f0b' }
+        ],
+        resultDesc: 'The model successfully achieved 95% validation accuracy across 5 classes, confirming that transfer learning with EfficientNetB5 effectively improves performance even with limited data. Data augmentation and dropout regularization also minimized overfitting, answering the problem of generalization in small datasets.',
+        deckLink: '#',
+        githubLink: 'https://github.com/RatuNoor/felidae-image-classification',
+        reportLink: 'https://drive.google.com/file/d/1YZi5ur_NlemyfolXCmCyegy3p8CEINFl/view'
+      },
+      {
+        id: 5,
+        name: 'Highlighted Machine Reliability & Component Failure Occurence Dashboard',
+        kw: 'EDA · Dashboard · Power BI',
+        color: 'lavender',
+        img: 'assets/projects/knb_project_1.png',
+        imgs: ['assets/projects/knb_project_1.png', 'assets/projects/knb_project_2.png', 'assets/projects/knb_project_3.png'],
+        type: 'Statistics & Visualization',
+        categories: ['stats', 'viz'],
+        duration: 'April 2025 (a month)',
+        tools: 'Power BI · Power Query · Excel',
+        keywords: 'EDA · Statistics · Power BI · Dashboard · Machine Reliability',
+        projectType: 'Internship Mini Project',
+        overview: 'Conducted an analysis of machine reliability and component failure occurrences, developing an interactive Power BI dashboard.',
+        problem: 'Machine reliability data were fragmented across multiple Excel files, hindering the identification of failure patterns and maintenance needs.',
+        bullets: [
+          'Fragmented machine reliability data across multiple Excel files hindered failure pattern identification',
+          'Lack of a centralized interactive dashboard hampered maintenance planning and decision-making',
+          'Need for automated tracking and visualization of component failures across different machine types'
+        ],
+        steps: [
+          { num: 1, title: 'Data Consolidation', desc: 'Consolidated scattered machine reliability data from multiple Excel files into a single unified dataset.' },
+          { num: 2, title: 'Data Cleaning & Transformation', desc: 'Performed extensive data cleaning, standardization, and transformation using Power Query to ensure data quality and consistency.' },
+          { num: 3, title: 'Dashboard Development', desc: 'Designed and developed an interactive Power BI dashboard to visualize machine reliability trends, failure patterns, and component performance.' },
+          { num: 4, title: 'Insights & Recommendations', desc: 'Generated actionable insights on component failure patterns and provided maintenance recommendations based on data-driven analysis.' }
+        ],
+        results: [
+          { num: '30+', label: 'Excel files consolidated', bg: '#ece8f4', border: '#d8d0e8', color: '#684a80' },
+          { num: '100%', label: 'Data quality improved', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: 'Interactive', label: 'Power BI dashboard launched', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' }
+        ],
+        resultDesc: 'The dashboard enables real-time monitoring of machine reliability, identification of critical failure patterns, and data-driven maintenance planning, ultimately improving operational efficiency and reducing downtime.',
+        deckLink: '#',
+        githubLink: '#',
+        reportLink: '#'
+      },
+      {
+        id: 6,
+        name: 'Failure Mode Classification in Maintenance Logs (Peruri)',
+        kw: 'NLP · Text Classification · Deep Learning',
+        color: 'blue',
+        img: 'assets/projects/img_project_7.jpg',
+        type: 'Deep Learning',
+        categories: ['dl', 'nlp'],
+        duration: 'March 2026 – April 2026 (1 month)',
+        tools: 'Python · Scikit-learn · XGBoost · Pandas',
+        keywords: 'NLP · Text Classification · Deep Learning',
+        projectType: 'Internship Mini Project',
+        overview: 'Developed a predictive model to classify failure modes in industrial machines using maintenance logs.',
+        problem: 'Maintenance logs were unstructured, making it difficult to identify failure patterns and trends. There was a need for a system to classify failure modes and extract meaningful information from maintenance logs.',
+        bullets: [
+          'Maintenance logs were unstructured, making it difficult to identify failure patterns and trends',
+          'Manual classification was time-consuming and prone to inconsistencies',
+          'Need for a system to classify failure modes and extract meaningful information from maintenance logs'
+        ],
+        steps: [
+          { num: 1, title: 'Data Collection & Preprocessing', desc: 'Extracted and cleaned unstructured maintenance logs from Peruri’s asset management database.' },
+          { num: 2, title: 'Feature Extraction & Failure Mode Labelling', desc: 'Extracted features including component/part name, failure keywords, and failure symptom, then applied rule-based labeling to generate failure mode labels (reducing manual labeling workload and increasing labeling speed)' },
+          { num: 3, title: 'Oversampling', desc: 'Applied SMOTE to address class imbalance in failure mode distribution.' },
+          { num: 4, title: 'MLP Modelling', desc: 'Engineered features and trained an MLP model to classify failure modes.' },
+          { num: 5, title: 'Hyperparameter Tuning', desc: 'Applied Optuna to optimize MLP hyperparameters.' }
+        ],
+        results: [
+          { num: '81.3%', label: 'Macro F1 Score on Test Set', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' },
+          { num: '75.2%', label: 'Accuracy Score on Test Set', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: '14.892', label: 'Rows labelled, reduce manual labeling, and became valuable variable in the information retrieval project', bg: 'var(--pink-light)', border: 'var(--pink-mid)', color: 'var(--pink-dark)' }
+        ],
+        resultDesc: 'The model achieved a 81.3% Macro F1 Score on the test set, enabling faster and more accurate failure mode classification and provide information to the information retrieval project.',
+        deckLink: '#',
+        githubLink: '#',
+        reportLink: '#'
+      },
+      {
+        id: 7,
+        name: 'IDX Partner Project',
+        kw: 'ML · DL · Credit Risk Analysis',
+        color: 'green',
+        img: 'assets/projects/img_project_8.jpg',
+        type: 'Machine Learning & Financial Risk Analysis',
+        categories: ['ml'],
+        duration: 'Jun 26',
+        tools: 'Python · Scikit-learn · Numpy · Pandas',
+        keywords: 'Anomaly Detection · Isolation Forest · Real-time Stream · Unsupervised ML',
+        projectType: 'Infrastructure Project',
+        overview: 'Created an unsupervised anomaly detection framework to monitor network logs, detecting cybersecurity intrusion patterns and server abnormalities in real time.',
+        problem: 'Rule-based firewalls failed to detect novel, zero-day security exploit patterns and distributed scan attempts.',
+        bullets: [
+          'Manual log review took days, meaning breaches were only detected post-incident',
+          'High false-positive rate from traditional static thresholds (over 10,000 alerts daily)',
+          'Real-time server log processing required sub-10ms parsing'
+        ],
+        steps: [
+          { num: 1, title: 'Stream Parsing', desc: 'Built a real-time log ingestion pipeline streaming server stats.' },
+          { num: 2, title: 'Feature Scaling', desc: 'Normalized packet sizes, source entropy, and requests per second.' },
+          { num: 3, title: 'Isolation Forest Model', desc: 'Implemented Isolation Forest for unsupervised anomaly boundary clustering.' },
+          { num: 4, title: 'Alert Integration', desc: 'Wired anomaly scores to trigger Slack alerts for security team review.' }
+        ],
+        results: [
+          { num: '95.6%', label: 'True positive detection rate', bg: 'var(--green-light)', border: '#90d070', color: 'var(--green-dark)' },
+          { num: '↓ 88%', label: 'False positive alert reduction', bg: '#ece8f4', border: '#d8d0e8', color: '#684a80' },
+          { num: '<8ms', label: 'Anomaly classification delay', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' }
+        ],
+        resultDesc: 'Achieved 95.6% detection rate of network anomalies, while reducing false alarm alerts by 88%. This allowed security analysts to focus on real security threats in real time.',
+        deckLink: '#',
+        githubLink: '#',
+        reportLink: '#'
+      },
+      {
+        id: 8,
+        name: 'Coal Price Forecasting with LSTM & ARIMA',
+        kw: 'Time Series - Deep Learning - ARIMA - Python',
+        color: 'pink',
+        img: 'assets/projects/coal_project_1.png',
+        imgs: ['assets/projects/coal_project_1.png', 'assets/projects/coal_project_2.png', 'assets/projects/coal_project_3.png'],
+        type: 'Time Series - Deep Learning - ARIMA - Python',
+        categories: ['ts', 'ml'],
+        duration: 'Jan 24 – Feb 2024 (2 months)',
+        tools: 'Python · Scikit-learn · Deep Learning · MySQL · Flask · Docker · Streamlit · NLP',
+        keywords: 'Time Series · Machine Learning · Deep Learning · ARIMA · LSTM · Python · PowerBI',
+        projectType: 'Internship Project',
+        overview: 'This project focuses on forecasting Newcastle coal prices to support business decision-making at PT. United Tractors. By comparing statistical (ARIMA) and machine learning (LSTM) models, the study identifies the most accurate method for predicting future price fluctuations. The results provide valuable insights into market trends that directly impact the company\'s profitability and operational strategy.',
+        problem: 'The primary challenge addressed in this project is how to perform time series forecasting for Newcastle coal prices and determine the superior approach between the ARIMA and LSTM models.',
+        bullets: [
+          'Newcastle coal price changes directly affect the profitability of coal mining operations and the demand for heavy equipment distribution',
+          'How to evaluate whether statistical mathematical approaches like ARIMA or neural network-based models like LSTM better handle the complexities of commodity price data?',
+        ],
+        steps: [
+          { num: 1, title: 'Data Collection', desc: 'Gathered secondary monthly historical Newcastle coal price data from Barchart.com for the period March 2020 to March 2024.' },
+          { num: 2, title: 'Preprocessing & EDA', desc: 'Cleaned data by removing missing values and analyzed visual trends to identify non-stationarity.' },
+          { num: 3, title: 'Data Transformation', desc: 'Applied Box-Cox transformations and differencing to stabilize variance and mean, a prerequisite for ARIMA modeling' },
+          { num: 4, title: 'ARIMA Modelling', desc: ' Identified potential orders via ACF/PACF plots, tested parameter significance, and validated ARIMA models through residual white noise tests.' },
+          { num: 5, title: 'LSTM Modelling', desc: 'Developed a Stacked LSTM model using trial-and-error hyperparameter tuning (units, timesteps, and optimizers) to handle small, volatile datasets.' },
+          { num: 6, title: 'Model Evaluation', desc: ' Compared model accuracy using Root Mean Square Error (RMSE) and Mean Absolute Percentage Error (MAPE) to select the superior method.' }
+        ],
+        results: [
+          { num: '8.10', label: 'RMSE Score (Stacked LSTM)', bg: '#dce8f8', border: '#b0d0f0', color: '#185fa5' },
+          { num: '6%', label: 'MAPE Score (Stacked LSTM)', bg: '#ece8f4', border: '#d8d0e8', color: '#684a80' },
+          { num: '11.38', label: 'RMSE Score (ARIMA 0,1,1)', bg: 'var(--pink-light)', border: 'var(--pink-mid)', color: 'var(--pink-dark)' },
+          { num: '8%', label: 'MAPE Score (ARIMA 0,1,1)', bg: 'var(--yellow-light)', border: 'var(--yellow-mid)', color: 'var(--yellow-dark)' }
+        ],
+        resultDesc: 'The Stacked LSTM model outperformed ARIMA, achieving a lower MAPE of 6%, indicating high predictive accuracy for volatile coal prices. While the best ARIMA model (0,1,1) forecasted a price decline, the Stacked LSTM correctly identified an upward trend for February and March 2024. These results provide PT United Tractors with a strategic tool for anticipating market shifts, though the study emphasizes that external factors like global politics still play a significant role in actual outcomes.',
+        deckLink: 'https://canva.link/l9p0ii159ryhrw0',
+        githubLink: '#',
+        reportLink: 'https://drive.google.com/file/d/1Vst8Q1OaGsCmEnke-uyO8Y8U5dFkbr1O/view'
+      }
+    ];
+
+    const bgMap = {
+      lavender: '#ece8f4', blue: '#dce8f8',
+      green: '#d8f0d0', pink: '#f8d0e0', yellow: '#f8f0c0',
+    };
+
+    /* ── STATE MANAGEMENT ── */
+    const PER_PAGE = 8;
+    let currentPage = 0;
+    let currentFilter = 'all';
+    let filteredProjects = [...projects];
+    let currentSlideIndex = 0;
+    let activeSlideCount = 0;
+
+    /* ── RENDER GRID ── */
+    function renderGrid() {
+      const grid = document.getElementById('proj-grid');
+      const start = currentPage * PER_PAGE;
+      const end = start + PER_PAGE;
+      const slice = filteredProjects.slice(start, end);
+      const total = Math.ceil(filteredProjects.length / PER_PAGE);
+
+      grid.innerHTML = '';
+
+      if (slice.length === 0) {
+        grid.innerHTML = '<div class="no-projects" style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--muted);">No projects found matching the criteria.</div>';
+        renderPagination(0);
+        return;
+      }
+
+      slice.forEach((p, i) => {
+        const card = document.createElement('div');
+        card.className = 'proj-card';
+        card.style.background = bgMap[p.color] || bgMap.lavender;
+        card.style.animationDelay = `${0.1 + i * 0.07}s`;
+        card.innerHTML = `
+          <div class="card-shapes">
+            <div class="cs-tri"></div>
+            <div class="cs-star"></div>
+            <div class="cs-rect"></div>
+          </div>
+          <img src="${p.img}" alt="${p.name}" class="proj-photo-img" onerror="this.style.display='none';">
+          <div class="card-overlay">
+            <div class="card-meta">
+              <div class="card-proj-name">${p.name}</div>
+              <div class="card-keywords">${p.kw}</div>
+            </div>
+            <button class="card-btn" onclick="event.stopPropagation(); showDetailById(${p.id})">More Details</button>
+          </div>
+        `;
+        card.addEventListener('click', () => showDetailById(p.id));
+        grid.appendChild(card);
+      });
+
+      renderPagination(total);
+    }
+
+    /* ── RENDER PAGINATION ── */
+    function renderPagination(total) {
+      const pg = document.getElementById('proj-pagination');
+      pg.innerHTML = '';
+      if (total <= 1) return; // Hide pagination if 1 page or none
+
+      for (let i = 0; i < total; i++) {
+        const btn = document.createElement('div');
+        btn.className = 'pg-btn' + (i === currentPage ? ' active' : '');
+        btn.textContent = i + 1;
+        btn.addEventListener('click', () => {
+          currentPage = i;
+          renderGrid();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        pg.appendChild(btn);
+      }
+    }
+
+    /* ── FILTER PILLS ── */
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        currentFilter = btn.dataset.filter || 'all';
+        filteredProjects = currentFilter === 'all'
+          ? [...projects]
+          : projects.filter(p => p.categories.includes(currentFilter));
+
+        currentPage = 0;
+        renderGrid();
+      });
+    });
+
+    /* ── TOOL BADGE HELPER ── */
+    const toolBadgeMap = {
+      'Python': { label: 'Py', cls: 'tb-py' },
+      'SQL': { label: 'SQL', cls: 'tb-sql' },
+      'Power BI': { label: 'PBI', cls: 'tb-pbi' },
+      'TensorFlow': { label: 'TF', cls: 'tb-tf' },
+      'Numpy': { label: 'NP', cls: 'tb-np' },
+      'Pandas': { label: 'PD', cls: 'tb-pd' },
+      'PyTorch': { label: 'Torch', cls: 'tb-torch' },
+      'Scikit-learn': { label: 'SK', cls: 'tb-sk' },
+      'XGBoost': { label: 'XGB', cls: 'tb-xgb' },
+      'Prophet': { label: 'PR', cls: 'tb-pr' },
+      'Docker': { label: 'Dock', cls: 'tb-dock' },
+      'Dash': { label: 'Dash', cls: 'tb-dash' },
+      'Plotly': { label: 'Plotly', cls: 'tb-dash' }
+    };
+
+    function parseTools(toolsString) {
+      return toolsString.split(' · ').map(t => {
+        const clean = t.trim();
+        const info = toolBadgeMap[clean] || { label: clean.substring(0, 4), cls: '' };
+        return `<div class="tool-badge ${info.cls}" title="${clean}">${info.label}</div>`;
+      }).join('');
+    }
+
+    /* ── PAGE SWITCHING ── */
+    function showPage(name) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById('page-' + name).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (name === 'detail') triggerDetailAnimations();
+    }
+
+    /* ── SHOW DETAIL ── */
+    let currentDetailId = 0;
+
+    function showDetailById(id) {
+      const p = projects.find(item => item.id === id);
+      if (!p) return;
+
+      currentDetailId = id;
+
+      // Update text fields
+      document.getElementById('detail-title').textContent = p.name;
+      document.getElementById('detail-type').textContent = p.type;
+      document.getElementById('detail-duration').textContent = p.duration;
+      document.getElementById('detail-tools').textContent = p.tools;
+      document.getElementById('detail-keywords').textContent = p.keywords;
+      document.getElementById('detail-project-type').textContent = p.projectType;
+      document.getElementById('detail-overview').textContent = p.overview;
+      document.getElementById('detail-problem').textContent = p.problem;
+
+      // Update hero theme color & image track
+      const banner = document.getElementById('detail-hero-banner');
+      banner.style.background = bgMap[p.color] || bgMap.lavender;
+
+      const imgList = p.imgs || (p.img ? [p.img] : []);
+      activeSlideCount = imgList.length;
+      currentSlideIndex = 0;
+
+      const track = document.getElementById('detail-carousel-track');
+      const carouselPrevBtn = document.getElementById('detail-carousel-prev');
+      const carouselNextBtn = document.getElementById('detail-carousel-next');
+      const indicators = document.getElementById('detail-carousel-indicators');
+
+      // Populate track
+      track.innerHTML = imgList.map(src => `
+        <div class="carousel-slide">
+          <img src="${src}" alt="${p.name}" onerror="this.style.display='none';">
+        </div>
+      `).join('');
+
+      // Populate indicators
+      indicators.innerHTML = imgList.map((_, idx) => `
+        <div class="carousel-dot ${idx === 0 ? 'active' : ''}" onclick="setSlideIndex(${idx})"></div>
+      `).join('');
+
+      // Show/hide controls depending on length
+      if (activeSlideCount > 1) {
+        carouselPrevBtn.style.display = 'flex';
+        carouselNextBtn.style.display = 'flex';
+        indicators.style.display = 'flex';
+      } else {
+        carouselPrevBtn.style.display = 'none';
+        carouselNextBtn.style.display = 'none';
+        indicators.style.display = 'none';
+      }
+
+      updateCarouselPosition();
+
+
+      // Update problem statement bullet points
+      const bulletsEl = document.getElementById('detail-bullets');
+      bulletsEl.innerHTML = p.bullets.map(b => `<li>${b}</li>`).join('');
+
+      // Update methodology steps
+      const stepsEl = document.getElementById('detail-steps');
+      stepsEl.innerHTML = `
+        <div class="step-line"></div>
+        ${p.steps.map(s => `
+          <div class="method-step">
+            <div class="step-num">${s.num}</div>
+            <div class="step-body">
+              <div class="step-title">${s.title}</div>
+              <div class="step-desc">${s.desc}</div>
+            </div>
+          </div>
+        `).join('')}
+      `;
+
+      // Update result cards
+      const resultsEl = document.getElementById('detail-results');
+      resultsEl.innerHTML = p.results.map(r => `
+        <div class="result-card" style="background:${r.bg};border-color:${r.border}">
+          <div class="result-num" style="color:${r.color}">${r.num}</div>
+          <div class="result-label">${r.label}</div>
+        </div>
+      `).join('');
+
+      document.getElementById('detail-result-desc').textContent = p.resultDesc;
+
+      // Update CTAs
+      const deckEl = document.getElementById('detail-deck-link');
+      deckEl.href = p.deckLink;
+      deckEl.style.display = p.deckLink === '#' ? 'none' : 'inline-flex';
+
+      const githubEl = document.getElementById('detail-github-link');
+      githubEl.href = p.githubLink;
+      githubEl.style.display = p.githubLink === '#' ? 'none' : 'inline-flex';
+
+      const reportEl = document.getElementById('detail-report-link');
+      reportEl.href = p.reportLink;
+      reportEl.style.display = p.reportLink === '#' ? 'none' : 'inline-flex';
+
+      // Update Next Project button (find next project in current filtered list)
+      const nextBtn = document.getElementById('detail-next-btn');
+      const idx = filteredProjects.findIndex(item => item.id === id);
+      if (idx !== -1 && idx < filteredProjects.length - 1) {
+        const nextProj = filteredProjects[idx + 1];
+        nextBtn.style.display = 'block';
+        nextBtn.textContent = `Next Project: ${nextProj.name} →`;
+        nextBtn.onclick = () => showDetailById(nextProj.id);
+      } else if (filteredProjects.length > 1 && idx === filteredProjects.length - 1) {
+        const firstProj = filteredProjects[0];
+        nextBtn.style.display = 'block';
+        nextBtn.textContent = `Next Project: ${firstProj.name} →`;
+        nextBtn.onclick = () => showDetailById(firstProj.id);
+      } else {
+        nextBtn.style.display = 'none';
+      }
+
+      showPage('detail');
+    }
+
+    /* ── CAROUSEL CONTROLLER ── */
+    function moveCarousel(direction) {
+      if (activeSlideCount <= 1) return;
+      currentSlideIndex = (currentSlideIndex + direction + activeSlideCount) % activeSlideCount;
+      updateCarouselPosition();
+    }
+
+    function setSlideIndex(idx) {
+      currentSlideIndex = idx;
+      updateCarouselPosition();
+    }
+
+    function updateCarouselPosition() {
+      const track = document.getElementById('detail-carousel-track');
+      if (!track) return;
+      track.style.transform = `translateX(-${currentSlideIndex * 100}%)`;
+
+      const dots = document.querySelectorAll('.carousel-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentSlideIndex);
+      });
+    }
+
+    /* ── SCROLL-TRIGGERED ANIMATIONS ── */
+    function triggerDetailAnimations() {
+      document.querySelectorAll('.anim-block').forEach(el => el.classList.remove('visible'));
+      document.querySelectorAll('.method-step').forEach(el => el.classList.remove('visible'));
+
+      setTimeout(() => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              observer.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('#page-detail .anim-block').forEach(el => observer.observe(el));
+
+        const steps = document.querySelectorAll('.method-step');
+        steps.forEach((s, i) => {
+          setTimeout(() => s.classList.add('visible'), 600 + i * 140);
+        });
+      }, 100);
+    }
+
+    /* ── CONTACT ACCORDION TOGGLE ── */
+    document.addEventListener('click', (e) => {
+      const wrapper = document.querySelector('.nav-contact-wrapper');
+      if (!wrapper) return;
+      const isClickInside = wrapper.contains(e.target);
+      if (isClickInside) {
+        const trigger = wrapper.querySelector('.nav-contact');
+        if (trigger && (e.target === trigger || trigger.contains(e.target))) {
+          wrapper.classList.toggle('active');
+        }
+      } else {
+        wrapper.classList.remove('active');
+      }
+    });
+
+    /* ── INIT ── */
+    renderGrid();
+
+    // Deep link to specific project detail if query param exists
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id') || urlParams.get('projectId');
+    if (projectId !== null) {
+      const idNum = parseInt(projectId, 10);
+      const proj = projects.find(p => p.id === idNum);
+      if (proj) {
+        showDetailById(idNum);
+      }
+    }
+  </script>
+</body>
+
+</html>
